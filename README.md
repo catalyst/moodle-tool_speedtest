@@ -9,7 +9,7 @@ A network speed test tool for Moodle
 * [What is this?](#what-is-this)
 * [Branches](#branches)
 * [Installation](#installation)
-* [Warm thanks](#warm-thanks)
+* [Credit & thanks](#credit-and-thanks)
 * [Support](#support)
 
 ## What is this?
@@ -49,16 +49,17 @@ Moodle plugin directory, or you can use git to clone it into your source:
 This plugin requires no configuration.
 
 
-Warm thanks
------------
+Credit and thanks
+-----------------
 
-This is essentially a wrapper or port of the excellent librespeed project:
+This is essentially a wrapper or port of the excellent librespeed project (LGPL3):
 
 https://github.com/librespeed/speedtest
 
 <a href="https://github.com/librespeed/speedtest">
 <img src="https://raw.githubusercontent.com/librespeed/speedtest/master/.logo/logo3.png">
 </a>
+
 
 Support
 -------
