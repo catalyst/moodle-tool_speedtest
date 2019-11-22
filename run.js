@@ -24,8 +24,12 @@ s.onupdate = function(data){
 
 s.onend = function(aborted) {
     var button = I("startStopBtn");
-    button.className = "btn btn-primary";
-    button.innerText = button.dataset.start;
+    if (aborted) {
+        button.className = "btn btn-primary";
+    } else {
+        button.className = "btn btn-success";
+    }
+    button.innerHTML = button.dataset.start;
 }
 
 function startStop(){ // Start/stop button pressed.
@@ -37,7 +41,7 @@ function startStop(){ // Start/stop button pressed.
         s.start();
         var button = I("startStopBtn");
         button.className = "btn btn-primary btn-warning";
-        button.innerText = button.dataset.abort;
+        button.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div> ' + button.dataset.abort;
     }
 }
 
