@@ -1,3 +1,0 @@
-[submodule "extlib/speedtest"]
-	path = extlib/speedtest
-	url = git@github.com:librespeed/speedtest.git
