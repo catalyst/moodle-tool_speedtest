@@ -36,7 +36,10 @@ echo $OUTPUT->header();
 <style type="text/css" src="styles.css"></style>
 <div id="test">
     <div>
-        <button id="startStopBtn" class="btn btn-primary" onclick="startStop()" data-start="<?php echo get_string('teststart' , 'tool_speedtest') ?>" data-abort="<?php echo get_string('testabort' , 'tool_speedtest') ?>"><?php echo get_string('teststart' , 'tool_speedtest') ?></button>
+        <button id="startStopBtn" class="btn btn-primary" onclick="startStop()"\
+ data-start="<?php echo get_string('teststart' , 'tool_speedtest') ?>"\
+ data-abort="<?php echo get_string('testabort' , 'tool_speedtest') ?>">\
+<?php echo get_string('teststart' , 'tool_speedtest') ?></button>
     </div>
     <div class="testGroup">
         <div class="testArea">
