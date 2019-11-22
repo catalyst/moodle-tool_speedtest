@@ -52,5 +52,3 @@ function initUI(){
 function I(id) {
     return document.getElementById(id);
 }
-
-//initUI();
