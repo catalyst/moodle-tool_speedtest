@@ -26,9 +26,6 @@ div.meterText{
 #ulText{
     color:#309030;
 }
-#pingText,#jitText{
-    color:#AA6060;
-}
 div.meterText:empty:before{
     color:#505050 !important;
     content:"0.0";

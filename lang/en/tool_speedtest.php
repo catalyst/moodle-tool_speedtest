@@ -23,3 +23,8 @@
  */
 
 $string['pluginname'] = 'Speed Test';
+$string['download'] = 'Download';
+$string['ipaddress'] = 'IP address';
+$string['jitter'] = 'Jitter';
+$string['ping'] = 'Ping';
+$string['upload'] = 'Upload';

@@ -25,6 +25,7 @@
 require_once(dirname(__FILE__) . '/../../../config.php');
 
 $PAGE->set_url('/admin/tool/speedtest/');
+$PAGE->set_pagelayout('report');
 $PAGE->set_context(context_system::instance());
 $PAGE->set_title(get_string('pluginname', 'tool_speedtest'));
 $PAGE->set_heading(get_string('pluginname', 'tool_speedtest'));
@@ -37,30 +38,30 @@ echo $OUTPUT->header();
 <div id="test">
     <div class="testGroup">
         <div class="testArea">
-            <div class="testName">Download</div>
+            <div class="testName"><?php echo get_string('download' , 'tool_speedtest') ?></div>
             <div id="dlText" class="meterText"></div>
             <div class="unit">Mbps</div>
         </div>
         <div class="testArea">
-            <div class="testName">Upload</div>
+            <div class="testName"><?php echo get_string('upload' , 'tool_speedtest') ?></div>
             <div id="ulText" class="meterText"></div>
             <div class="unit">Mbps</div>
         </div>
     </div>
     <div class="testGroup">
         <div class="testArea">
-            <div class="testName">Ping</div>
+            <div class="testName"><?php echo get_string('ping' , 'tool_speedtest') ?></div>
             <div id="pingText" class="meterText"></div>
             <div class="unit">ms</div>
         </div>
         <div class="testArea">
-            <div class="testName">Jitter</div>
+            <div class="testName"><?php echo get_string('jitter' , 'tool_speedtest') ?></div>
             <div id="jitText" class="meterText"></div>
             <div class="unit">ms</div>
         </div>
     </div>
     <div id="ipArea">
-        IP Address: <span id="ip"></span>
+        <?php echo get_string('ipaddress', 'tool_speedtest') ?>: <span id="ip"></span>
     </div>
 </div>
 <script type="text/javascript">
