@@ -46,7 +46,8 @@ s.onupdate=function(data){ //callback to update data in UI
     I("jitText").textContent=data.jitterStatus;
 }
 s.onend=function(aborted){ //callback for test ended/aborted
-    I("startStopBtn").className=""; //show start button again
+    I("startStopBtn").className="btn btn-primary"; //show start button again
+    I("startStopBtn").innerText = 'Start';
     if(aborted){ //if the test was aborted, clear the UI and prepare for new test
 		initUI();
     }
@@ -59,7 +60,8 @@ function startStop(){ //start/stop button pressed
 	}else{
 		//test is not running, begin
 		s.start();
-		I("startStopBtn").className="running";
+		I("startStopBtn").className="btn btn-primary btn-warning";
+		I("startStopBtn").innerText = 'Abort'
 	}
 }
 
@@ -76,46 +78,6 @@ function I(id){return document.getElementById(id);}
 </script>
 
 <style type="text/css">
-	html,body{
-		border:none; padding:0; margin:0;
-		background:#FFFFFF;
-		color:#202020;
-	}
-	body{
-		text-align:center;
-		font-family:"Roboto",sans-serif;
-	}
-	h1{
-		color:#404040;
-	}
-	#startStopBtn{
-		display:inline-block;
-		margin:0 auto;
-		color:#6060AA;
-		background-color:rgba(0,0,0,0);
-		border:0.15em solid #6060FF;
-		border-radius:0.3em;
-		transition:all 0.3s;
-		box-sizing:border-box;
-		width:8em; height:3em;
-		line-height:2.7em;
-		cursor:pointer;
-		box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
-	}
-	#startStopBtn:hover{
-		box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
-	}
-	#startStopBtn.running{
-		background-color:#FF3030;
-		border-color:#FF6060;
-		color:#FFFFFF;
-	}
-	#startStopBtn:before{
-		content:"Start";
-	}
-	#startStopBtn.running:before{
-		content:"Abort";
-	}
 	#test{
 		margin-top:2em;
 		margin-bottom:12em;
@@ -163,25 +125,16 @@ function I(id){return document.getElementById(id);}
 	div.testGroup{
 		display:inline-block;
 	}
-	@media all and (max-width:65em){
-		body{
-			font-size:1.5vw;
-		}
-	}
 	@media all and (max-width:40em){
-		body{
-			font-size:0.8em;
-		}
 		div.testGroup{
 			display:block;
 			margin: 0 auto;
 		}
 	}
-
 </style>
 </head>
 <body>
-<div id="startStopBtn" class="btn" onclick="startStop()"></div>
+<button id="startStopBtn" class="btn btn-primary" onclick="startStop()">Start</button>
 <div id="test">
 	<div class="testGroup">
 		<div class="testArea">
