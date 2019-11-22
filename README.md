@@ -6,6 +6,9 @@
 
 A network speed test tool for Moodle
 
+![image](https://user-images.githubusercontent.com/187449/69426326-24f1f380-0d81-11ea-82e7-0339fe902aee.png)
+
+
 * [What is this?](#what-is-this)
 * [Branches](#branches)
 * [Installation](#installation)
