@@ -4,7 +4,7 @@
 
 # tool_speedtest
 
-A speed test tool for Moodle
+A network speed test tool for Moodle
 
 * [What is this?](#what-is-this)
 * [Branches](#branches)
@@ -14,10 +14,12 @@ A speed test tool for Moodle
 
 ## What is this?
 
-Speed tests will always be specific to the particular combination of the end
-users computer, network, and all of the hops in the middle up to and including
-the actual moodle. No 3rd party test will ever give you a true indication of
-exactly how fast a user can access this specific moodle site.
+This is a network speed tester like many tests such as fast.com or the tester build directly into google.
+
+The key difference is it is hosted directly inside your Moodle instance. Speed tests will always be specific to the particular combination of the end users computer, network, and all of the hops in the middle up to and including the actual moodle. No 3rd party test will ever give you a true indication of exactly how fast a user can access this specific moodle site.
+
+In fact using a test tool such as Google's which will likely be host on CDN edge servers very close to your user will almost always give a false and overly optimistic estimate of the true network speed to your moodle instance.
+
 
 Branches
 --------
@@ -28,8 +30,8 @@ Branches
 | Totara 12+        | master      | 7.0+ |
 
 
-Installaton
------------
+Installation
+------------
 
 1. Install the plugin the same as any standard moodle plugin either via the
 Moodle plugin directory, or you can use git to clone it into your source:
