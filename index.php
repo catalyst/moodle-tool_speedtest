@@ -24,11 +24,14 @@
 
 require_once(dirname(__FILE__) . '/../../../config.php');
 
-$PAGE->set_url('/admin/tool/speedtest/');
+$url = new moodle_url('/admin/tool/speedtest/');
+$PAGE->set_url($url);
 $PAGE->set_pagelayout('report');
 $PAGE->set_context(context_system::instance());
 $PAGE->set_title(get_string('pluginname', 'tool_speedtest'));
 $PAGE->set_heading(get_string('pluginname', 'tool_speedtest'));
+$PAGE->navbar->add(get_string('pluginname', 'tool_speedtest'), $url);
+
 echo $OUTPUT->header();
 ?>
 <script type="text/javascript" src="speedtest.js"></script>
