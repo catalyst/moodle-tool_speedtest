@@ -14,7 +14,7 @@ A network speed test tool for Moodle
 
 ## What is this?
 
-This is a network speed tester like many tests such as fast.com or the tester build directly into google.
+This is a network speed tester, just like many other test pages such as [fast.com](https://fast.com/) by Netflix or the tester [build directly into google](https://www.google.com.au/search?q=internet+speed).
 
 The key difference is it is hosted directly inside your Moodle instance. Speed tests will always be specific to the particular combination of the end users computer, network, and all of the hops in the middle up to and including the actual moodle. No 3rd party test will ever give you a true indication of exactly how fast a user can access this specific moodle site.
 
