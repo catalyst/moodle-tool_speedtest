@@ -33,6 +33,9 @@ This is essentially a wrapper or port of the excellent librespeed project:
 
 https://github.com/librespeed/speedtest
 
+<a href="https://github.com/librespeed/speedtest">
+<img src="https://raw.githubusercontent.com/librespeed/speedtest/master/.logo/logo3.png">
+</a>
 
 ## Support
 
