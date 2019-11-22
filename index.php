@@ -32,65 +32,8 @@ echo $OUTPUT->header();
 ?>
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript" src="run.js"></script>
-
-<style type="text/css">
-#test{
-    margin-top:2em;
-    margin-bottom:12em;
-}
-div.testArea{
-    display:inline-block;
-    width:14em;
-    height:9em;
-    position:relative;
-    box-sizing:border-box;
-}
-div.testName{
-    position:absolute;
-    top:0.1em; left:0;
-    width:100%;
-    font-size:1.4em;
-    z-index:9;
-}
-div.meterText{
-    position:absolute;
-    bottom:1.5em; left:0;
-    width:100%;
-    font-size:2.5em;
-    z-index:9;
-}
-#dlText{
-    color:#6060AA;
-}
-#ulText{
-    color:#309030;
-}
-#pingText,#jitText{
-    color:#AA6060;
-}
-div.meterText:empty:before{
-    color:#505050 !important;
-    content:"0.00";
-}
-div.unit{
-    position:absolute;
-    bottom:2em; left:0;
-    width:100%;
-    z-index:9;
-}
-div.testGroup{
-    display:inline-block;
-}
-@media all and (max-width:40em){
-    div.testGroup{
-        display:block;
-        margin: 0 auto;
-    }
-}
-</style>
-</head>
-<body>
-<button id="startStopBtn" class="btn btn-primary" onclick="startStop()">Start</button>
+<style type="text/css" src="styles.css"></style>
+<button id="startStopBtn" class="btn btn-primary" onclick="startStop()">Start test</button>
 <div id="test">
     <div class="testGroup">
         <div class="testArea">
@@ -102,7 +45,7 @@ div.testGroup{
             <div class="testName">Upload</div>
             <div id="ulText" class="meterText"></div>
             <div class="unit">Mbps</div>
-    </div>
+        </div>
     </div>
     <div class="testGroup">
         <div class="testArea">

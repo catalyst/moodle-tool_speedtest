@@ -1,0 +1,48 @@
+#test {
+    margin-top:2em;
+    margin-bottom:12em;
+}
+div.testArea {
+    display: inline-block;
+    width: 14em;
+    height: 8em;
+    box-sizing: border-box;
+}
+div.testName {
+    font-size: 1.5em;
+    text-align: right;
+    width: 6em;
+}
+div.meterText{
+    width: 3em;
+    font-size: 3em;
+    text-align: right;
+    display: inline-block;
+    line-height: 1em;
+}
+#dlText{
+    color:#6060AA;
+}
+#ulText{
+    color:#309030;
+}
+#pingText,#jitText{
+    color:#AA6060;
+}
+div.meterText:empty:before{
+    color:#505050 !important;
+    content:"0.00";
+}
+div.unit {
+    width: 3em;
+    display: inline-block;
+}
+div.testGroup{
+    display:inline-block;
+}
+@media all and (max-width:40em){
+    div.testGroup{
+        display:block;
+        margin: 0 auto;
+    }
+}
