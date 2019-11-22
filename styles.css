@@ -14,8 +14,8 @@ div.testName {
     width: 6em;
 }
 div.meterText{
-    width: 3em;
-    font-size: 3em;
+    width: 2.3333em;
+    font-size: 4em;
     text-align: right;
     display: inline-block;
     line-height: 1em;
@@ -31,7 +31,7 @@ div.meterText{
 }
 div.meterText:empty:before{
     color:#505050 !important;
-    content:"0.00";
+    content:"0.0";
 }
 div.unit {
     width: 3em;
