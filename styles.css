@@ -1,34 +1,42 @@
 #test {
-    margin-top:2em;
-    margin-bottom:12em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
 }
 div.testArea {
     display: inline-block;
-    width: 14em;
-    height: 6em;
+    width: 17em;
+    height: 5em;
     box-sizing: border-box;
     position: relative;
 }
 div.testName {
     font-size: 1.5em;
-    width: 6em;
+    text-align: left;
+    width: 5em;
     position: absolute;
     left: 6.33333em;
+    text-align: left;
 }
 div.meterText{
-    width: 2.3333em;
-    font-size: 4em;
-    text-align: right;
     display: inline-block;
-    line-height: 1em;
+    left: 0em;
+    position: absolute;
+    width: 2.333em;
+    font-size: 4em;
     font-weight: bold;
+    line-height: 1em;
+    text-align: right;
 }
 div.meterText:empty:before{
-    content:"0.0";
+    content: "0.0";
 }
 div.unit {
-    width: 3em;
-    display: inline-block;
+    position: absolute;
+    left: 9.5em;
+    top: 2.3em;
+    width: 5em;
+    text-align: left;
 }
 div.testGroup{
     display:inline-block;
