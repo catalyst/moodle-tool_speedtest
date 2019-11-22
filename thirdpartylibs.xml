@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<libraries>
+  <library>
+    <location>backend</location>
+    <name>SpeedTest</name>
+    <license>GPL</license>
+    <licenseversion>3</licenseversion>
+  </library>
+  <library>
+    <location>speedtest.js</location>
+    <name>SpeedTest</name>
+    <license>GPL</license>
+    <licenseversion>3</licenseversion>
+  </library>
+  <library>
+    <location>speedtest_worker.js</location>
+    <name>SpeedTest</name>
+    <license>GPL</license>
+    <licenseversion>3</licenseversion>
+  </library>
+</libraries>
