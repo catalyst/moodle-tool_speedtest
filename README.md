@@ -20,7 +20,7 @@ This is a network speed tester, just like many other test pages such as [fast.co
 
 The key difference is it is hosted directly inside your Moodle instance. Speed tests will always be specific to the particular combination of the end users computer, network, and all of the hops in the middle up to and including the actual moodle. No 3rd party test will ever give you a true indication of exactly how fast a user can access your specific moodle site.
 
-In fact using a test tool such as Google's which will likely be host on CDN edge servers very close to your user will almost always give a false and overly optimistic estimate of the true network speed to your moodle instance.
+In fact using a test tool such as Google's which will likely be hosted on CDN edge servers very close to your end users will almost always give a false and overly optimistic estimate of the true network speed to your moodle instance.
 
 
 Branches
