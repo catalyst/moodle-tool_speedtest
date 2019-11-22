@@ -1,14 +1,14 @@
 #test {
-    margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
 }
 div.testArea {
     display: inline-block;
     width: 17em;
-    height: 5em;
+    height: 4em;
     box-sizing: border-box;
     position: relative;
+    margin-top: 1em;
 }
 div.testName {
     font-size: 1.5em;
