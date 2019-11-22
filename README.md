@@ -1,3 +1,5 @@
+<img align="right" width="371" height="638" src="https://user-images.githubusercontent.com/187449/69426326-24f1f380-0d81-11ea-82e7-0339fe902aee.png">
+
 <a href="https://travis-ci.org/catalyst/moodle-tool_speedtest">
 <img src="https://travis-ci.org/catalyst/moodle-tool_speedtest.svg?branch=master">
 </a>
@@ -5,9 +7,6 @@
 # tool_speedtest
 
 A network speed test tool for Moodle
-
-![image](https://user-images.githubusercontent.com/187449/69426326-24f1f380-0d81-11ea-82e7-0339fe902aee.png)
-
 
 * [What is this?](#what-is-this)
 * [Branches](#branches)
