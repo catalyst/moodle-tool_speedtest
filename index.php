@@ -37,7 +37,7 @@ echo $OUTPUT->header();
 <div id="test">
     <div>
         <button id="startStopBtn" class="btn btn-primary" onclick="startStop()"
- data-start="<?php echo get_string('teststart' , 'tool_speedtest') ?>"
+ data-start="<?php echo get_string('testrerun' , 'tool_speedtest') ?>"
  data-abort="<?php echo get_string('testabort' , 'tool_speedtest') ?>">
 <?php echo get_string('teststart' , 'tool_speedtest') ?></button>
     </div>
@@ -66,11 +66,8 @@ echo $OUTPUT->header();
         </div>
     </div>
     <div id="ipArea">
-        <?php echo get_string('ipaddress', 'tool_speedtest') ?>: <span id="ip"></span>
+        <?php echo get_string('ipaddress', 'tool_speedtest') ?>: <span id="ip"><?php echo getremoteaddr(null) ?></span>
     </div>
 </div>
-<script type="text/javascript">
-    initUI();
-</script>
 <?php
 echo $OUTPUT->footer();

@@ -29,4 +29,5 @@ $string['jitter'] = 'Jitter';
 $string['ping'] = 'Ping';
 $string['teststart'] = 'Start speed test';
 $string['testabort'] = 'Abort speed test';
+$string['testrerun'] = 'Re-run speed test';
 $string['upload'] = 'Upload';

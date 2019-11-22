@@ -26,13 +26,10 @@ s.onend = function(aborted) {
     var button = I("startStopBtn");
     button.className = "btn btn-primary";
     button.innerText = button.dataset.start;
-    if(aborted) {
-        initUI();
-    }
 }
 
 function startStop(){ // Start/stop button pressed.
-    if(s.getState() == 3) {
+    if (s.getState() == 3) {
         // Speedtest is running, abort.
         s.abort();
     } else {
@@ -55,3 +52,5 @@ function initUI(){
 function I(id) {
     return document.getElementById(id);
 }
+
+//initUI();
