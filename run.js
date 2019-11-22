@@ -23,8 +23,9 @@ s.onupdate = function(data){
 }
 
 s.onend = function(aborted) {
-    I("startStopBtn").className = "btn btn-primary";
-    I("startStopBtn").innerText = 'Start test';
+    var button = I("startStopBtn");
+    button.className = "btn btn-primary";
+    button.innerText = button.dataset.start;
     if(aborted) {
         initUI();
     }
@@ -37,8 +38,9 @@ function startStop(){ // Start/stop button pressed.
     } else {
         // Test is not running, begin.
         s.start();
-        I("startStopBtn").className = "btn btn-primary btn-warning";
-        I("startStopBtn").innerText = 'Abort test'
+        var button = I("startStopBtn");
+        button.className = "btn btn-primary btn-warning";
+        button.innerText = button.dataset.abort;
     }
 }
 

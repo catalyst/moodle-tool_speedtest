@@ -34,7 +34,7 @@ echo $OUTPUT->header();
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript" src="run.js"></script>
 <style type="text/css" src="styles.css"></style>
-<button id="startStopBtn" class="btn btn-primary" onclick="startStop()">Start speed test</button>
+<button id="startStopBtn" class="btn btn-primary" onclick="startStop()" data-start="<?php echo get_string('teststart' , 'tool_speedtest') ?>" data-abort="<?php echo get_string('testabort' , 'tool_speedtest') ?>"><?php echo get_string('teststart' , 'tool_speedtest') ?></button>
 <div id="test">
     <div class="testGroup">
         <div class="testArea">

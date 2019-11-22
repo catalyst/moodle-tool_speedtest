@@ -27,4 +27,6 @@ $string['download'] = 'Download';
 $string['ipaddress'] = 'IP address';
 $string['jitter'] = 'Jitter';
 $string['ping'] = 'Ping';
+$string['teststart'] = 'Start speed test';
+$string['testabort'] = 'Abort speed test';
 $string['upload'] = 'Upload';
