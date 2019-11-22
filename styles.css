@@ -5,13 +5,15 @@
 div.testArea {
     display: inline-block;
     width: 14em;
-    height: 8em;
+    height: 6em;
     box-sizing: border-box;
+    position: relative;
 }
 div.testName {
     font-size: 1.5em;
-    text-align: right;
     width: 6em;
+    position: absolute;
+    left: 6.33333em;
 }
 div.meterText{
     width: 2.3333em;
@@ -19,15 +21,9 @@ div.meterText{
     text-align: right;
     display: inline-block;
     line-height: 1em;
-}
-#dlText{
-    color:#6060AA;
-}
-#ulText{
-    color:#309030;
+    font-weight: bold;
 }
 div.meterText:empty:before{
-    color:#505050 !important;
     content:"0.0";
 }
 div.unit {
