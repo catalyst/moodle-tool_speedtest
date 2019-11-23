@@ -15,11 +15,15 @@ function renderNumber(number) {
 }
 
 s.onupdate = function(data){
-    I("ip").textContent       = data.clientIp;
-    I("dlText").textContent   = (data.testState == 1 && data.dlStatus == 0) ? "..." : renderNumber(data.dlStatus);
-    I("ulText").textContent   = (data.testState == 3 && data.ulStatus == 0) ? "..." : renderNumber(data.ulStatus);
+    if (data.testState == 5) {
+        // Speedtest is aborted, leave info intact.
+        return;
+    }
+    I(      "ip").textContent = data.clientIp;
+    I(  "dlText").textContent = (data.testState == 1 && data.dlStatus == 0) ? "..." : renderNumber(data.dlStatus);
+    I(  "ulText").textContent = (data.testState == 3 && data.ulStatus == 0) ? "..." : renderNumber(data.ulStatus);
     I("pingText").textContent = renderNumber(data.pingStatus);
-    I("jitText").textContent  = renderNumber(data.jitterStatus);
+    I( "jitText").textContent = renderNumber(data.jitterStatus);
 }
 
 s.onend = function(aborted) {
@@ -43,14 +47,6 @@ function startStop(){ // Start/stop button pressed.
         button.className = "btn btn-primary btn-warning";
         button.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div> ' + button.dataset.abort;
     }
-}
-
-function initUI(){
-    I("dlText").textContent = "";
-    I("ulText").textContent = "";
-    I("pingText").textContent = "";
-    I("jitText").textContent = "";
-    I("ip").textContent = "";
 }
 
 function I(id) {
