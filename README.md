@@ -39,12 +39,12 @@ Installation
 Moodle plugin directory, or you can use git to clone it into your source:
 
    ```sh
-   git clone git@github.com:catalyst/moodle-auth_saml2.git auth/saml2
+   git clone git@github.com:catalyst/moodle-toll_speedtest.git admin/tool/speedtest
    ```
 
    Or install via the Moodle plugin directory:
     
-   https://moodle.org/plugins/auth_saml2
+   https://moodle.org/plugins/tool_speedtest
 
 2. Then run the Moodle upgrade
 
