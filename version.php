@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019112200;
-$plugin->release   = 2019112200; // Match release exactly to version.
+$plugin->version   = 2019112800;
+$plugin->release   = 2019112800; // Match release exactly to version.
 $plugin->requires  = 2016052300; // Support going back to 3.5.
 $plugin->component = 'tool_speedtest';
 $plugin->maturity  = MATURITY_STABLE;
