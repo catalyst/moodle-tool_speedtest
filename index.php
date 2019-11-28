@@ -68,9 +68,8 @@ echo $OUTPUT->header();
             <div class="unit">ms</div>
         </div>
     </div>
-    <div id="ipArea">
-        <?php echo get_string('ipaddress', 'tool_speedtest') ?>: <span id="ip"><?php echo getremoteaddr(null) ?></span>
-    </div>
+    <div><?php echo get_string('ipaddress', 'tool_speedtest') ?>: <span id="ip"><?php echo getremoteaddr(null) ?></span></div>
+    <div><?php echo get_string('network', 'tool_speedtest') ?>: <span id="network">-</span></div>
 </div>
 <?php
 echo $OUTPUT->footer();

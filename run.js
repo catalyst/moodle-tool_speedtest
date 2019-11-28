@@ -19,7 +19,7 @@ s.onupdate = function(data){
         // Speedtest is aborted, leave info intact.
         return;
     }
-    I(      "ip").textContent = data.clientIp;
+    I( "network").textContent = data.clientIp;
     I(  "dlText").textContent = (data.testState == 1 && data.dlStatus == 0) ? "..." : renderNumber(data.dlStatus);
     I(  "ulText").textContent = (data.testState == 3 && data.ulStatus == 0) ? "..." : renderNumber(data.ulStatus);
     I("pingText").textContent = renderNumber(data.pingStatus);

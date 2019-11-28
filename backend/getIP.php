@@ -28,31 +28,31 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 $ip = preg_replace("/^::ffff:/", "", $ip);
 
 if ($ip == "::1") { // ::1/128 is the only localhost ipv6 address. there are no others, no need to strpos this
-    echo json_encode(['processedString' => $ip . " - localhost IPv6 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "localhost IPv6 access", 'rawIspInfo' => ""]);
     die();
 }
 if (stripos($ip, 'fe80:') === 0) { // simplified IPv6 link-local address (should match fe80::/10)
-    echo json_encode(['processedString' => $ip . " - link-local IPv6 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "link-local IPv6 access", 'rawIspInfo' => ""]);
     die();
 }
 if (strpos($ip, '127.') === 0) { //anything within the 127/8 range is localhost ipv4, the ip must start with 127.0
-    echo json_encode(['processedString' => $ip . " - localhost IPv4 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "localhost IPv4 access", 'rawIspInfo' => ""]);
     die();
 }
 if (strpos($ip, '10.') === 0) { // 10/8 private IPv4
-    echo json_encode(['processedString' => $ip . " - private IPv4 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "private IPv4 access", 'rawIspInfo' => ""]);
     die();
 }
 if (preg_match('/^172\.(1[6-9]|2\d|3[01])\./', $ip) === 1) { // 172.16/12 private IPv4
-    echo json_encode(['processedString' => $ip . " - private IPv4 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "private IPv4 access", 'rawIspInfo' => ""]);
     die();
 }
 if (strpos($ip, '192.168.') === 0) { // 192.168/16 private IPv4
-    echo json_encode(['processedString' => $ip . " - private IPv4 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "private IPv4 access", 'rawIspInfo' => ""]);
     die();
 }
 if (strpos($ip, '169.254.') === 0) { // IPv4 link-local
-    echo json_encode(['processedString' => $ip . " - link-local IPv4 access", 'rawIspInfo' => ""]);
+    echo json_encode(['processedString' => "link-local IPv4 access", 'rawIspInfo' => ""]);
     die();
 }
 
