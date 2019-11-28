@@ -26,6 +26,7 @@ $string['pluginname'] = 'Speed Test';
 $string['download'] = 'Download';
 $string['ipaddress'] = 'IP address';
 $string['network'] = 'Network / ISP';
+$string['location'] = 'Location';
 $string['jitter'] = 'Jitter';
 $string['ping'] = 'Ping';
 $string['teststart'] = 'Start speed test';
