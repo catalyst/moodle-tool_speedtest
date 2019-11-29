@@ -15,22 +15,28 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle speedtest
+ * Privacy provider.
  *
  * @package    tool_speedtest
- * @copyright  2019 Brendan Heywood <brendan@catalyst-au.net>
+ * @copyright  2019 Peter Burnett <peterburnett@catalyst-au.net>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Speed Test';
-$string['download'] = 'Download';
-$string['ipaddress'] = 'IP address';
-$string['network'] = 'Network / ISP';
-$string['location'] = 'Location';
-$string['jitter'] = 'Jitter';
-$string['ping'] = 'Ping';
-$string['teststart'] = 'Start speed test';
-$string['testabort'] = 'Abort speed test';
-$string['testrerun'] = 'Re-run speed test';
-$string['upload'] = 'Upload';
-$string['privacy:metadata'] = 'The speedtest plugin does not store any user data.';
+namespace tool_speedtest\privacy;
+
+class provider implements
+    // This plugin does not store any personal user data.
+    \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() : string {
+        return 'privacy:metadata';
+    }
+}
+
+
