@@ -17,15 +17,15 @@
 /**
  * Version details.
  *
- * @package    tool_heartbeat
+ * @package    tool_speedtest
  * @copyright  2019 Brendan Heywood <brendan@catalyst-au.net>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019112800;
-$plugin->release   = 2019112800; // Match release exactly to version.
+$plugin->version   = 2019121000;
+$plugin->release   = 2019121000; // Match release exactly to version.
 $plugin->requires  = 2016052300; // Support going back to 3.5.
 $plugin->component = 'tool_speedtest';
 $plugin->maturity  = MATURITY_STABLE;
