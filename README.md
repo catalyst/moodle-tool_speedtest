@@ -11,6 +11,7 @@ A network speed test tool for Moodle
 * [What is this?](#what-is-this)
 * [Branches](#branches)
 * [Installation](#installation)
+* [Usage](#usage)
 * [Credit & thanks](#credit-and-thanks)
 * [Support](#support)
 
@@ -50,6 +51,16 @@ Moodle plugin directory, or you can use git to clone it into your source:
 
 This plugin requires no configuration.
 
+Usage
+-----
+
+To run the speed test visit this url on your instance:
+
+/admin/tool/speedtest/
+
+Because this tool is intended to be a diagnostic tool it is pubicly available.
+
+This tool doesn't add itself to any menu's so you will need to add links to it as needed, ie from your support pages.
 
 Credit and thanks
 -----------------
