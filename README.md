@@ -81,11 +81,9 @@ If you have issues please log them in github here
 
 https://github.com/catalyst/moodle-tool_speedtest/issues
 
-Please note our time is limited, so if you need urgent support or want to
-sponsor a new feature then please contact Catalyst IT Australia:
+Please note our time is limited, so if you need urgent support or want to sponsor a new feature then please contact us:
 
 https://www.catalyst-au.net/contact-us
-
 
 This plugin was developed by Catalyst IT Australia:
 
