@@ -1,7 +1,7 @@
 <img align="right" width="371" height="638" src="https://user-images.githubusercontent.com/187449/69426326-24f1f380-0d81-11ea-82e7-0339fe902aee.png">
 
-<a href="https://travis-ci.org/catalyst/moodle-tool_speedtest">
-<img src="https://travis-ci.org/catalyst/moodle-tool_speedtest.svg?branch=master">
+<a href="https://github.com/catalyst/moodle-tool_seo/actions">
+<img src="https://github.com/catalyst/moodle-tool_seo/actions/workflows/ci.yml/badge.svg" >
 </a>
 
 # tool_speedtest
@@ -27,10 +27,11 @@ In fact using a test tool such as Google's which will likely be hosted on CDN ed
 Branches
 --------
 
-| Moodle verion     | Branch      | PHP        |
-| ----------------- | ----------- | ---------- |
-| Moodle 3.5 to 3.8 | master      | 5.5 - 7.0+ |
-| Totara 12+        | master      | 7.0+ |
+| Moodle verion     | Branch            | PHP        |
+| ----------------- | ----------------- | ---------- |
+| Moodle 5.2        | MOODLE_502_STABLE | 8.2+       |
+| Moodle 3.5 to 3.8 | master            | 5.5 - 7.0+ |
+| Totara 12+        | master            | 7.0+       |
 
 
 Installation
