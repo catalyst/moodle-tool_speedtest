@@ -126,13 +126,22 @@ function I(id) {
     </div>
 <?php
 $ip = getremoteaddr();
-$iplookup = new moodle_url('/iplookup/', array('ip' => $ip));
+$iplookup = new moodle_url('/iplookup/', ['ip' => $ip]);
 $info = iplookup_find_location($ip);
 $location = $info['country'] . ' - ' . $info['city'];
 ?>
-    <div><?php echo get_string('ipaddress', 'tool_speedtest') ?>: <span id="ip"><?php echo html_writer::link($iplookup, $ip) ?></span></div>
-    <div><?php echo get_string('location', 'tool_speedtest') ?>: <span id="location"><?php echo $location ?></span></div>
-    <div><?php echo get_string('network', 'tool_speedtest') ?>: <span id="network">-</span></div>
+    <div>
+        <?php echo get_string('ipaddress', 'tool_speedtest') ?>:
+        <span id="ip"><?php echo html_writer::link($iplookup, $ip) ?></span>
+    </div>
+    <div>
+        <?php echo get_string('location', 'tool_speedtest') ?>:
+        <span id="location"><?php echo $location ?></span>
+    </div>
+    <div>
+        <?php echo get_string('network', 'tool_speedtest') ?>:
+        <span id="network">-</span>
+    </div>
 </div>
 <?php
 echo $OUTPUT->footer();
