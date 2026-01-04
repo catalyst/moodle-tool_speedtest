@@ -33,115 +33,14 @@ $PAGE->set_title(get_string('pluginname', 'tool_speedtest'));
 $PAGE->set_heading(get_string('pluginname', 'tool_speedtest'));
 $PAGE->navbar->add(get_string('pluginname', 'tool_speedtest'), $url);
 
-echo $OUTPUT->header();
-?>
-<script type="text/javascript" src="speedtest.js"></script>
-<script type="text/javascript">
-var s = new Speedtest();
-
-function renderNumber(number) {
-    if (isNaN(number)) {
-        return number;
-    }
-    var flt = parseFloat(number);
-    if (flt < 10) {
-        return flt.toFixed(1);
-    }
-    if (flt >= 10) {
-        return flt.toFixed(0);
-    }
-    return number;
-}
-
-s.onupdate = function(data){
-    if (data.testState == 5) {
-        // Speedtest is aborted, leave info intact.
-        return;
-    }
-    I( "network").textContent = data.clientIp;
-    I(  "dlText").textContent = (data.testState == 1 && data.dlStatus == 0) ? "..." : renderNumber(data.dlStatus);
-    I(  "ulText").textContent = (data.testState == 3 && data.ulStatus == 0) ? "..." : renderNumber(data.ulStatus);
-    I("pingText").textContent = renderNumber(data.pingStatus);
-    I( "jitText").textContent = renderNumber(data.jitterStatus);
-}
-
-s.onend = function(aborted) {
-    var button = I("startStopBtn");
-    if (aborted) {
-        button.className = "btn btn-primary";
-    } else {
-        button.className = "btn btn-success";
-    }
-    button.innerHTML = button.dataset.start;
-}
-
-function startStop(){ // Start/stop button pressed.
-    if (s.getState() == 3) {
-        // Speedtest is running, abort.
-        s.abort();
-    } else {
-        // Test is not running, begin.
-        s.start();
-        var button = I("startStopBtn");
-        button.className = "btn btn-primary btn-warning";
-        button.innerHTML = '<div class="spinner-border spinner-border-sm" role="status"></div> ' + button.dataset.abort;
-    }
-}
-
-function I(id) {
-    return document.getElementById(id);
-}
-</script>
-<style type="text/css" src="styles.css"></style>
-<div id="test">
-    <div>
-        <button id="startStopBtn" class="btn btn-primary" onclick="startStop()"
- data-start="<?php echo get_string('testrerun' , 'tool_speedtest') ?>"
- data-abort="<?php echo get_string('testabort' , 'tool_speedtest') ?>">
-<?php echo get_string('teststart' , 'tool_speedtest') ?></button>
-    </div>
-    <div class="testGroup">
-        <div class="testArea">
-            <div class="testName"><?php echo get_string('download' , 'tool_speedtest') ?></div>
-            <div id="dlText" class="meterText"></div>
-            <div class="unit">Mbps</div>
-        </div>
-        <div class="testArea">
-            <div class="testName"><?php echo get_string('upload' , 'tool_speedtest') ?></div>
-            <div id="ulText" class="meterText"></div>
-            <div class="unit">Mbps</div>
-        </div>
-    </div>
-    <div class="testGroup">
-        <div class="testArea">
-            <div class="testName"><?php echo get_string('ping' , 'tool_speedtest') ?></div>
-            <div id="pingText" class="meterText"></div>
-            <div class="unit">ms</div>
-        </div>
-        <div class="testArea">
-            <div class="testName"><?php echo get_string('jitter' , 'tool_speedtest') ?></div>
-            <div id="jitText" class="meterText"></div>
-            <div class="unit">ms</div>
-        </div>
-    </div>
-<?php
 $ip = getremoteaddr();
 $iplookup = new moodle_url('/iplookup/', ['ip' => $ip]);
 $info = iplookup_find_location($ip);
-$location = $info['country'] . ' - ' . $info['city'];
-?>
-    <div>
-        <?php echo get_string('ipaddress', 'tool_speedtest') ?>:
-        <span id="ip"><?php echo html_writer::link($iplookup, $ip) ?></span>
-    </div>
-    <div>
-        <?php echo get_string('location', 'tool_speedtest') ?>:
-        <span id="location"><?php echo $location ?></span>
-    </div>
-    <div>
-        <?php echo get_string('network', 'tool_speedtest') ?>:
-        <span id="network">-</span>
-    </div>
-</div>
-<?php
+
+echo $OUTPUT->header();
+echo $OUTPUT->render_from_template('tool_speedtest/index', [
+    'ip' => $ip,
+    'iplookup' => html_writer::link($iplookup, $ip),
+    'location' => $info['country'] . ' - ' . $info['city'],
+]);
 echo $OUTPUT->footer();
