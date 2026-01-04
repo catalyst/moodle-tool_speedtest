@@ -46,11 +46,11 @@ echo $OUTPUT->render_from_template('tool_speedtest/index', [
 ]);
 echo $OUTPUT->footer();
 
-$event = \tool_speedtest\event\speedtest_result::create(array(
-    'other' => array(
+$event = \tool_speedtest\event\speedtest_result::create([
+    'other' => [
         'ip' => $ip,
         'location' => $location,
         'network' => 'unknown',
-    ),
-));
+    ],
+]);
 $event->trigger();

@@ -18,7 +18,7 @@
  * Speed test event class.
  *
  * @package     tool_speedtest
- * @copyright   2019 Brendan Heywood <brendan@catalyst-au.net>
+ * @copyright   2026 Brendan Heywood <brendan@catalyst-au.net>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,17 +26,14 @@ namespace tool_speedtest\event;
 
 use core\event\base;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Speed test result
  *
  * @package     tool_speedtest
- * @copyright   2019 Brendan Heywood <brendan@catalyst-au.net>
+ * @copyright   2026 Brendan Heywood <brendan@catalyst-au.net>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class speedtest_result extends base {
-
     /**
      * Init method.
      *
@@ -72,8 +69,7 @@ class speedtest_result extends base {
      * @return string
      */
     public function get_description() {
-        return "User ran a speed tst";
+        return "User ran a speed test";
     }
-
 }
 

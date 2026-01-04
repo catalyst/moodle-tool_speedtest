@@ -31,6 +31,7 @@ $string['ping'] = 'Ping';
 $string['pluginname'] = 'Speed Test';
 $string['privacy:metadata'] = 'The speedtest plugin does not store any user data.';
 $string['testabort'] = 'Abort speed test';
+$string['speedtest_results'] = 'Speed test run';
 $string['testrerun'] = 'Re-run speed test';
 $string['teststart'] = 'Start speed test';
 $string['upload'] = 'Upload';
