@@ -22,15 +22,15 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Speed Test';
 $string['download'] = 'Download';
 $string['ipaddress'] = 'IP address';
-$string['network'] = 'Network / ISP';
-$string['location'] = 'Location';
 $string['jitter'] = 'Jitter';
+$string['location'] = 'Location';
+$string['network'] = 'Network / ISP';
 $string['ping'] = 'Ping';
-$string['teststart'] = 'Start speed test';
+$string['pluginname'] = 'Speed Test';
+$string['privacy:metadata'] = 'The speedtest plugin does not store any user data.';
 $string['testabort'] = 'Abort speed test';
 $string['testrerun'] = 'Re-run speed test';
+$string['teststart'] = 'Start speed test';
 $string['upload'] = 'Upload';
-$string['privacy:metadata'] = 'The speedtest plugin does not store any user data.';
