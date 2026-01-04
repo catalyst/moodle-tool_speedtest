@@ -29,4 +29,4 @@ $plugin->release   = 2019121000; // Match release exactly to version.
 $plugin->requires  = 2016052300; // Support going back to 3.5.
 $plugin->component = 'tool_speedtest';
 $plugin->maturity  = MATURITY_STABLE;
-
+$plugin->incompatible = 502;
