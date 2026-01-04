@@ -29,4 +29,4 @@ $plugin->release   = 2026010401; // Match release exactly to version.
 $plugin->requires  = 2025100600; // Support going back to 5.2.
 $plugin->component = 'tool_speedtest';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->supported = [502, 502];
+$plugin->supported = [501, 501]; // Temp 5.1 until 5.2 comes out.
