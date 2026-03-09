@@ -72,4 +72,3 @@ class speedtest_result extends base {
         return "User ran a speed test";
     }
 }
-

@@ -40,6 +40,7 @@ $info = [];
 try {
     $info = iplookup_find_location($ip);
 } catch (Exception $e) {
+    // IP lookup is optional; ignore failures and continue without location info.
 }
 
 echo $OUTPUT->header();
