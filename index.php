@@ -36,7 +36,11 @@ $PAGE->navbar->add(get_string('pluginname', 'tool_speedtest'), $url);
 
 $ip = getremoteaddr();
 $iplookup = new moodle_url('/iplookup/', ['ip' => $ip]);
-$info = iplookup_find_location($ip);
+$info = [];
+try {
+    $info = iplookup_find_location($ip);
+} catch (Exception $e) {
+}
 
 echo $OUTPUT->header();
 echo $OUTPUT->render_from_template('tool_speedtest/index', [
