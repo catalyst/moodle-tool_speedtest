@@ -30,7 +30,7 @@ Branches
 | Moodle verion     | Branch            | PHP        |
 | ----------------- | ----------------- | ---------- |
 | Moodle 5.2        | MOODLE_502_STABLE | 8.2+       |
-| Moodle 3.5 to 3.8 | master            | 5.5 - 7.0+ |
+| Moodle 3.5 to 4.5 | master            | 5.5 - 7.0+ |
 | Totara 12+        | master            | 7.0+       |
 
 
