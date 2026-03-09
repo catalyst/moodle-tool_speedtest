@@ -16,7 +16,6 @@ div.testName {
     width: 5em;
     position: absolute;
     left: 6.33333em;
-    text-align: left;
 }
 div.meterText{
     display: inline-block;
