@@ -1,7 +1,7 @@
 <img align="right" width="371" height="638" src="https://user-images.githubusercontent.com/187449/69426326-24f1f380-0d81-11ea-82e7-0339fe902aee.png">
 
-<a href="https://github.com/catalyst/moodle-tool_seo/actions">
-<img src="https://github.com/catalyst/moodle-tool_seo/actions/workflows/ci.yml/badge.svg" >
+<a href="https://github.com/catalyst/moodle-tool_speedtest/actions">
+<img src="https://github.com/catalyst/moodle-tool_speedtest/actions/workflows/ci.yml/badge.svg" >
 </a>
 
 # tool_speedtest
