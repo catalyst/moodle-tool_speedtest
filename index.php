@@ -39,7 +39,7 @@ $iplookup = new moodle_url('/iplookup/', ['ip' => $ip]);
 $info = [];
 try {
     $info = iplookup_find_location($ip);
-} catch (Exception $e) {
+} catch (Exception $e) { // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedCatch
     // IP lookup is optional; ignore failures and continue without location info.
 }
 
